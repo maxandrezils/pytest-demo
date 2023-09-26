@@ -1,0 +1,325 @@
+{
+  "$schema": "http://json-schema.org/draft-06/schema#",
+  "$ref": "#/definitions/Welcome2",
+  "definitions": {
+      "Welcome2": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+              "accuracy": {
+                  "type": "integer"
+              },
+              "contest_combos": {
+                  "$ref": "#/definitions/ContestCombos"
+              },
+              "contest_effect": {
+                  "$ref": "#/definitions/ContestEffect"
+              },
+              "contest_type": {
+                  "$ref": "#/definitions/ContestType"
+              },
+              "damage_class": {
+                  "$ref": "#/definitions/ContestType"
+              },
+              "effect_chance": {
+                  "type": "null"
+              },
+              "effect_changes": {
+                  "type": "array",
+                  "items": {}
+              },
+              "effect_entries": {
+                  "type": "array",
+                  "items": {
+                      "$ref": "#/definitions/EffectEntry"
+                  }
+              },
+              "flavor_text_entries": {
+                  "type": "array",
+                  "items": {
+                      "$ref": "#/definitions/FlavorTextEntry"
+                  }
+              },
+              "generation": {
+                  "$ref": "#/definitions/ContestType"
+              },
+              "id": {
+                  "type": "integer"
+              },
+              "learned_by_pokemon": {
+                  "type": "array",
+                  "items": {
+                      "$ref": "#/definitions/ContestType"
+                  }
+              },
+              "machines": {
+                  "type": "array",
+                  "items": {}
+              },
+              "meta": {
+                  "$ref": "#/definitions/Meta"
+              },
+              "name": {
+                  "type": "string"
+              },
+              "names": {
+                  "type": "array",
+                  "items": {
+                      "$ref": "#/definitions/Name"
+                  }
+              },
+              "past_values": {
+                  "type": "array",
+                  "items": {}
+              },
+              "power": {
+                  "type": "integer"
+              },
+              "pp": {
+                  "type": "integer"
+              },
+              "priority": {
+                  "type": "integer"
+              },
+              "stat_changes": {
+                  "type": "array",
+                  "items": {}
+              },
+              "super_contest_effect": {
+                  "$ref": "#/definitions/ContestEffect"
+              },
+              "target": {
+                  "$ref": "#/definitions/ContestType"
+              },
+              "type": {
+                  "$ref": "#/definitions/ContestType"
+              }
+          },
+          "required": [
+              "accuracy",
+              "contest_combos",
+              "contest_effect",
+              "contest_type",
+              "damage_class",
+              "effect_chance",
+              "effect_changes",
+              "effect_entries",
+              "flavor_text_entries",
+              "generation",
+              "id",
+              "learned_by_pokemon",
+              "machines",
+              "meta",
+              "name",
+              "names",
+              "past_values",
+              "power",
+              "pp",
+              "priority",
+              "stat_changes",
+              "super_contest_effect",
+              "target",
+              "type"
+          ],
+          "title": "Welcome2"
+      },
+      "ContestCombos": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+              "normal": {
+                  "$ref": "#/definitions/Normal"
+              },
+              "super": {
+                  "$ref": "#/definitions/Normal"
+              }
+          },
+          "required": [
+              "normal",
+              "super"
+          ],
+          "title": "ContestCombos"
+      },
+      "Normal": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+              "use_after": {
+                  "type": "null"
+              },
+              "use_before": {
+                  "anyOf": [
+                      {
+                          "type": "array",
+                          "items": {
+                              "$ref": "#/definitions/ContestType"
+                          }
+                      },
+                      {
+                          "type": "null"
+                      }
+                  ]
+              }
+          },
+          "required": [
+              "use_after",
+              "use_before"
+          ],
+          "title": "Normal"
+      },
+      "ContestType": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+              "name": {
+                  "type": "string"
+              },
+              "url": {
+                  "type": "string",
+                  "format": "uri",
+                  "qt-uri-protocols": [
+                      "https"
+                  ]
+              }
+          },
+          "required": [
+              "name",
+              "url"
+          ],
+          "title": "ContestType"
+      },
+      "ContestEffect": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+              "url": {
+                  "type": "string",
+                  "format": "uri",
+                  "qt-uri-protocols": [
+                      "https"
+                  ]
+              }
+          },
+          "required": [
+              "url"
+          ],
+          "title": "ContestEffect"
+      },
+      "EffectEntry": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+              "effect": {
+                  "type": "string"
+              },
+              "language": {
+                  "$ref": "#/definitions/ContestType"
+              },
+              "short_effect": {
+                  "type": "string"
+              }
+          },
+          "required": [
+              "effect",
+              "language",
+              "short_effect"
+          ],
+          "title": "EffectEntry"
+      },
+      "FlavorTextEntry": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+              "flavor_text": {
+                  "type": "string"
+              },
+              "language": {
+                  "$ref": "#/definitions/ContestType"
+              },
+              "version_group": {
+                  "$ref": "#/definitions/ContestType"
+              }
+          },
+          "required": [
+              "flavor_text",
+              "language",
+              "version_group"
+          ],
+          "title": "FlavorTextEntry"
+      },
+      "Meta": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+              "ailment": {
+                  "$ref": "#/definitions/ContestType"
+              },
+              "ailment_chance": {
+                  "type": "integer"
+              },
+              "category": {
+                  "$ref": "#/definitions/ContestType"
+              },
+              "crit_rate": {
+                  "type": "integer"
+              },
+              "drain": {
+                  "type": "integer"
+              },
+              "flinch_chance": {
+                  "type": "integer"
+              },
+              "healing": {
+                  "type": "integer"
+              },
+              "max_hits": {
+                  "type": "null"
+              },
+              "max_turns": {
+                  "type": "null"
+              },
+              "min_hits": {
+                  "type": "null"
+              },
+              "min_turns": {
+                  "type": "null"
+              },
+              "stat_chance": {
+                  "type": "integer"
+              }
+          },
+          "required": [
+              "ailment",
+              "ailment_chance",
+              "category",
+              "crit_rate",
+              "drain",
+              "flinch_chance",
+              "healing",
+              "max_hits",
+              "max_turns",
+              "min_hits",
+              "min_turns",
+              "stat_chance"
+          ],
+          "title": "Meta"
+      },
+      "Name": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+              "language": {
+                  "$ref": "#/definitions/ContestType"
+              },
+              "name": {
+                  "type": "string"
+              }
+          },
+          "required": [
+              "language",
+              "name"
+          ],
+          "title": "Name"
+      }
+  }
+}

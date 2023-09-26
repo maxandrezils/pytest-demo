@@ -15,3 +15,9 @@ To run the tests, run the following command
 ```bash
 poetry run pytest
 ```
+
+To run the tests with an HTML report
+
+```bash
+poetry run pytest -v -s --html=report.html --self-contained-html
+```

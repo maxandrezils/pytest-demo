@@ -10,7 +10,16 @@ readme = "README.md"
 python = "^3.11"
 pytest = "^7.4.2"
 requests = "^2.31.0"
+pytest-sugar = "^0.9.7"
+pytest-html = "^4.0.2"
 
+[tool.pytest]
+testpaths = "tests"
+markers = ["slow"]
+
+[tool.pytest.plugins]
+pytest-sugar = true
+pytest-html = true
 
 [build-system]
 requires = ["poetry-core"]

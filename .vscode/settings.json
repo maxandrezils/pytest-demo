@@ -1,9 +1,15 @@
 {
   "conventionalCommits.scopes": [
-    "python virtual env"
+    "python virtual env",
+    "types"
   ],
   "[python]": {
     "editor.defaultFormatter": "ms-python.black-formatter"
   },
-  "python.formatting.provider": "none"
+  "python.formatting.provider": "none",
+  "python.testing.pytestArgs": [
+    "tests"
+  ],
+  "python.testing.unittestEnabled": false,
+  "python.testing.pytestEnabled": true
 }

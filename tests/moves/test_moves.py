@@ -1,6 +1,7 @@
 import json
 import pytest
 import requests
+import time
 from jsonschema import validate
 
 
@@ -39,7 +40,7 @@ class TestPokemonMoves:
         """
         Tests that the PokéAPI endpoint for getting a move by ID returns a successful response with the correct data.
         """
-        response = requests.get(f"{self.base_url}/{id_or_name}")
+        response = requests.get(f"{self.base_url}{id_or_name}")
         assert response.status_code == 200
         data = response.json()
         assert data["name"] == move_name
@@ -59,7 +60,7 @@ class TestPokemonMoves:
         """
         Tests that the JSON response from the PokéAPI endpoint for getting a move by ID validates against the saved schema file.
         """
-        response = requests.get(f"{self.base_url}/{id_or_move_name}")
+        response = requests.get(f"{self.base_url}{id_or_move_name}")
         data = response.json()
         validate(data, self.json_schema)
 
@@ -85,6 +86,16 @@ class TestPokemonMoves:
         """
         Test the validation on the moves endpoint
         """
-        response = requests.get(f"{self.base_url}/{id_or_name}")
+        response = requests.get(f"{self.base_url}{id_or_name}")
         assert response.status_code == status_code
         assert response.text == message
+
+    def test_get_move_performance(self):
+        """
+        Test that the moves endpoint responds in less than a second
+        """
+        start_time = time.time()
+        response = requests.get(f"{self.base_url}1")
+        end_time = time.time()
+        response_time = end_time - start_time
+        assert response_time < 1.0

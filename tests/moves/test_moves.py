@@ -38,12 +38,6 @@ class TestPokemonMoves:
     ):
         """
         Tests that the PokéAPI endpoint for getting a move by ID returns a successful response with the correct data.
-        - correct move name is returned
-        - correct accuracy is returned
-        - correct damage class is returned
-        - correct power is returned
-        - correct pp is returned
-        - correct type is returned
         """
         response = requests.get(f"{self.base_url}/{id_or_name}")
         assert response.status_code == 200
@@ -70,3 +64,6 @@ class TestPokemonMoves:
         validate(data, self.json_schema)
 
     def test_get_move_validation(self):
+        """
+        Test the validation on the moves endpoint
+        """

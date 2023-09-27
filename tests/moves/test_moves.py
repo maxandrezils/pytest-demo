@@ -63,7 +63,28 @@ class TestPokemonMoves:
         data = response.json()
         validate(data, self.json_schema)
 
-    def test_get_move_validation(self):
+    @pytest.mark.parametrize(
+        ("id_or_name", "message", "status_code"),
+        [
+            pytest.param(-1, "Not Found", 404, id="Negative id returns a 404"),
+            pytest.param(
+                9999,
+                "Not Found",
+                404,
+                id="Id that exceeds number of moves returns a 404",
+            ),
+            pytest.param(
+                "Invalidmove",
+                "Not Found",
+                404,
+                id="Move that doesnt exist returns a 404",
+            ),
+        ],
+    )
+    def test_get_move_validation(self, id_or_name, message, status_code):
         """
         Test the validation on the moves endpoint
         """
+        response = requests.get(f"{self.base_url}/{id_or_name}")
+        assert response.status_code == status_code
+        assert response.text == message

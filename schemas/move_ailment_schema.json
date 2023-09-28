@@ -1,0 +1,515 @@
+{
+  "$schema": "https://json-schema.org/draft/2019-09/schema",
+  "$id": "http://example.com/example.json",
+  "type": "object",
+  "default": {},
+  "title": "Root Schema",
+  "required": [
+      "id",
+      "moves",
+      "name",
+      "names"
+  ],
+  "properties": {
+      "id": {
+          "type": "integer",
+          "default": 0,
+          "title": "The id Schema",
+          "examples": [
+              1
+          ]
+      },
+      "moves": {
+          "type": "array",
+          "default": [],
+          "title": "The moves Schema",
+          "items": {
+              "type": "object",
+              "title": "A Schema",
+              "required": [
+                  "name",
+                  "url"
+              ],
+              "properties": {
+                  "name": {
+                      "type": "string",
+                      "title": "The name Schema",
+                      "examples": [
+                          "thunder-punch",
+                          "body-slam",
+                          "stun-spore",
+                          "thunder-shock",
+                          "thunderbolt",
+                          "thunder-wave",
+                          "thunder",
+                          "lick",
+                          "glare",
+                          "zap-cannon",
+                          "spark",
+                          "dragon-breath",
+                          "bounce",
+                          "volt-tackle",
+                          "force-palm",
+                          "thunder-fang",
+                          "discharge",
+                          "bolt-strike",
+                          "freeze-shock",
+                          "nuzzle",
+                          "stoked-sparksurfer",
+                          "splishy-splash",
+                          "buzzy-buzz"
+                      ]
+                  },
+                  "url": {
+                      "type": "string",
+                      "title": "The url Schema",
+                      "examples": [
+                          "https://pokeapi.co/api/v2/move/9/",
+                          "https://pokeapi.co/api/v2/move/34/",
+                          "https://pokeapi.co/api/v2/move/78/",
+                          "https://pokeapi.co/api/v2/move/84/",
+                          "https://pokeapi.co/api/v2/move/85/",
+                          "https://pokeapi.co/api/v2/move/86/",
+                          "https://pokeapi.co/api/v2/move/87/",
+                          "https://pokeapi.co/api/v2/move/122/",
+                          "https://pokeapi.co/api/v2/move/137/",
+                          "https://pokeapi.co/api/v2/move/192/",
+                          "https://pokeapi.co/api/v2/move/209/",
+                          "https://pokeapi.co/api/v2/move/225/",
+                          "https://pokeapi.co/api/v2/move/340/",
+                          "https://pokeapi.co/api/v2/move/344/",
+                          "https://pokeapi.co/api/v2/move/395/",
+                          "https://pokeapi.co/api/v2/move/422/",
+                          "https://pokeapi.co/api/v2/move/435/",
+                          "https://pokeapi.co/api/v2/move/550/",
+                          "https://pokeapi.co/api/v2/move/553/",
+                          "https://pokeapi.co/api/v2/move/609/",
+                          "https://pokeapi.co/api/v2/move/700/",
+                          "https://pokeapi.co/api/v2/move/730/",
+                          "https://pokeapi.co/api/v2/move/734/"
+                      ]
+                  }
+              },
+              "examples": [{
+                  "name": "thunder-punch",
+                  "url": "https://pokeapi.co/api/v2/move/9/"
+              },
+              {
+                  "name": "body-slam",
+                  "url": "https://pokeapi.co/api/v2/move/34/"
+              },
+              {
+                  "name": "stun-spore",
+                  "url": "https://pokeapi.co/api/v2/move/78/"
+              },
+              {
+                  "name": "thunder-shock",
+                  "url": "https://pokeapi.co/api/v2/move/84/"
+              },
+              {
+                  "name": "thunderbolt",
+                  "url": "https://pokeapi.co/api/v2/move/85/"
+              },
+              {
+                  "name": "thunder-wave",
+                  "url": "https://pokeapi.co/api/v2/move/86/"
+              },
+              {
+                  "name": "thunder",
+                  "url": "https://pokeapi.co/api/v2/move/87/"
+              },
+              {
+                  "name": "lick",
+                  "url": "https://pokeapi.co/api/v2/move/122/"
+              },
+              {
+                  "name": "glare",
+                  "url": "https://pokeapi.co/api/v2/move/137/"
+              },
+              {
+                  "name": "zap-cannon",
+                  "url": "https://pokeapi.co/api/v2/move/192/"
+              },
+              {
+                  "name": "spark",
+                  "url": "https://pokeapi.co/api/v2/move/209/"
+              },
+              {
+                  "name": "dragon-breath",
+                  "url": "https://pokeapi.co/api/v2/move/225/"
+              },
+              {
+                  "name": "bounce",
+                  "url": "https://pokeapi.co/api/v2/move/340/"
+              },
+              {
+                  "name": "volt-tackle",
+                  "url": "https://pokeapi.co/api/v2/move/344/"
+              },
+              {
+                  "name": "force-palm",
+                  "url": "https://pokeapi.co/api/v2/move/395/"
+              },
+              {
+                  "name": "thunder-fang",
+                  "url": "https://pokeapi.co/api/v2/move/422/"
+              },
+              {
+                  "name": "discharge",
+                  "url": "https://pokeapi.co/api/v2/move/435/"
+              },
+              {
+                  "name": "bolt-strike",
+                  "url": "https://pokeapi.co/api/v2/move/550/"
+              },
+              {
+                  "name": "freeze-shock",
+                  "url": "https://pokeapi.co/api/v2/move/553/"
+              },
+              {
+                  "name": "nuzzle",
+                  "url": "https://pokeapi.co/api/v2/move/609/"
+              },
+              {
+                  "name": "stoked-sparksurfer",
+                  "url": "https://pokeapi.co/api/v2/move/700/"
+              },
+              {
+                  "name": "splishy-splash",
+                  "url": "https://pokeapi.co/api/v2/move/730/"
+              },
+              {
+                  "name": "buzzy-buzz",
+                  "url": "https://pokeapi.co/api/v2/move/734/"
+              }]
+          },
+          "examples": [
+              [{
+                  "name": "thunder-punch",
+                  "url": "https://pokeapi.co/api/v2/move/9/"
+              },
+              {
+                  "name": "body-slam",
+                  "url": "https://pokeapi.co/api/v2/move/34/"
+              },
+              {
+                  "name": "stun-spore",
+                  "url": "https://pokeapi.co/api/v2/move/78/"
+              },
+              {
+                  "name": "thunder-shock",
+                  "url": "https://pokeapi.co/api/v2/move/84/"
+              },
+              {
+                  "name": "thunderbolt",
+                  "url": "https://pokeapi.co/api/v2/move/85/"
+              },
+              {
+                  "name": "thunder-wave",
+                  "url": "https://pokeapi.co/api/v2/move/86/"
+              },
+              {
+                  "name": "thunder",
+                  "url": "https://pokeapi.co/api/v2/move/87/"
+              },
+              {
+                  "name": "lick",
+                  "url": "https://pokeapi.co/api/v2/move/122/"
+              },
+              {
+                  "name": "glare",
+                  "url": "https://pokeapi.co/api/v2/move/137/"
+              },
+              {
+                  "name": "zap-cannon",
+                  "url": "https://pokeapi.co/api/v2/move/192/"
+              },
+              {
+                  "name": "spark",
+                  "url": "https://pokeapi.co/api/v2/move/209/"
+              },
+              {
+                  "name": "dragon-breath",
+                  "url": "https://pokeapi.co/api/v2/move/225/"
+              },
+              {
+                  "name": "bounce",
+                  "url": "https://pokeapi.co/api/v2/move/340/"
+              },
+              {
+                  "name": "volt-tackle",
+                  "url": "https://pokeapi.co/api/v2/move/344/"
+              },
+              {
+                  "name": "force-palm",
+                  "url": "https://pokeapi.co/api/v2/move/395/"
+              },
+              {
+                  "name": "thunder-fang",
+                  "url": "https://pokeapi.co/api/v2/move/422/"
+              },
+              {
+                  "name": "discharge",
+                  "url": "https://pokeapi.co/api/v2/move/435/"
+              },
+              {
+                  "name": "bolt-strike",
+                  "url": "https://pokeapi.co/api/v2/move/550/"
+              },
+              {
+                  "name": "freeze-shock",
+                  "url": "https://pokeapi.co/api/v2/move/553/"
+              },
+              {
+                  "name": "nuzzle",
+                  "url": "https://pokeapi.co/api/v2/move/609/"
+              },
+              {
+                  "name": "stoked-sparksurfer",
+                  "url": "https://pokeapi.co/api/v2/move/700/"
+              },
+              {
+                  "name": "splishy-splash",
+                  "url": "https://pokeapi.co/api/v2/move/730/"
+              },
+              {
+                  "name": "buzzy-buzz",
+                  "url": "https://pokeapi.co/api/v2/move/734/"
+              }]
+          ]
+      },
+      "name": {
+          "type": "string",
+          "default": "",
+          "title": "The name Schema",
+          "examples": [
+              "paralysis"
+          ]
+      },
+      "names": {
+          "type": "array",
+          "default": [],
+          "title": "The names Schema",
+          "items": {
+              "type": "object",
+              "title": "A Schema",
+              "required": [
+                  "language",
+                  "name"
+              ],
+              "properties": {
+                  "language": {
+                      "type": "object",
+                      "title": "The language Schema",
+                      "required": [
+                          "name",
+                          "url"
+                      ],
+                      "properties": {
+                          "name": {
+                              "type": "string",
+                              "title": "The name Schema",
+                              "examples": [
+                                  "fr",
+                                  "es",
+                                  "en"
+                              ]
+                          },
+                          "url": {
+                              "type": "string",
+                              "title": "The url Schema",
+                              "examples": [
+                                  "https://pokeapi.co/api/v2/language/5/",
+                                  "https://pokeapi.co/api/v2/language/7/",
+                                  "https://pokeapi.co/api/v2/language/9/"
+                              ]
+                          }
+                      },
+                      "examples": [{
+                          "name": "fr",
+                          "url": "https://pokeapi.co/api/v2/language/5/"
+                      },
+                      {
+                          "name": "es",
+                          "url": "https://pokeapi.co/api/v2/language/7/"
+                      },
+                      {
+                          "name": "en",
+                          "url": "https://pokeapi.co/api/v2/language/9/"
+                      }]
+                  },
+                  "name": {
+                      "type": "string",
+                      "title": "The name Schema",
+                      "examples": [
+                          "Paralysie",
+                          "Parálisis",
+                          "Paralysis"
+                      ]
+                  }
+              },
+              "examples": [{
+                  "language": {
+                      "name": "fr",
+                      "url": "https://pokeapi.co/api/v2/language/5/"
+                  },
+                  "name": "Paralysie"
+              },
+              {
+                  "language": {
+                      "name": "es",
+                      "url": "https://pokeapi.co/api/v2/language/7/"
+                  },
+                  "name": "Parálisis"
+              },
+              {
+                  "language": {
+                      "name": "en",
+                      "url": "https://pokeapi.co/api/v2/language/9/"
+                  },
+                  "name": "Paralysis"
+              }]
+          },
+          "examples": [
+              [{
+                  "language": {
+                      "name": "fr",
+                      "url": "https://pokeapi.co/api/v2/language/5/"
+                  },
+                  "name": "Paralysie"
+              },
+              {
+                  "language": {
+                      "name": "es",
+                      "url": "https://pokeapi.co/api/v2/language/7/"
+                  },
+                  "name": "Parálisis"
+              },
+              {
+                  "language": {
+                      "name": "en",
+                      "url": "https://pokeapi.co/api/v2/language/9/"
+                  },
+                  "name": "Paralysis"
+              }]
+          ]
+      }
+  },
+  "examples": [{
+      "id": 1,
+      "moves": [{
+          "name": "thunder-punch",
+          "url": "https://pokeapi.co/api/v2/move/9/"
+      },
+      {
+          "name": "body-slam",
+          "url": "https://pokeapi.co/api/v2/move/34/"
+      },
+      {
+          "name": "stun-spore",
+          "url": "https://pokeapi.co/api/v2/move/78/"
+      },
+      {
+          "name": "thunder-shock",
+          "url": "https://pokeapi.co/api/v2/move/84/"
+      },
+      {
+          "name": "thunderbolt",
+          "url": "https://pokeapi.co/api/v2/move/85/"
+      },
+      {
+          "name": "thunder-wave",
+          "url": "https://pokeapi.co/api/v2/move/86/"
+      },
+      {
+          "name": "thunder",
+          "url": "https://pokeapi.co/api/v2/move/87/"
+      },
+      {
+          "name": "lick",
+          "url": "https://pokeapi.co/api/v2/move/122/"
+      },
+      {
+          "name": "glare",
+          "url": "https://pokeapi.co/api/v2/move/137/"
+      },
+      {
+          "name": "zap-cannon",
+          "url": "https://pokeapi.co/api/v2/move/192/"
+      },
+      {
+          "name": "spark",
+          "url": "https://pokeapi.co/api/v2/move/209/"
+      },
+      {
+          "name": "dragon-breath",
+          "url": "https://pokeapi.co/api/v2/move/225/"
+      },
+      {
+          "name": "bounce",
+          "url": "https://pokeapi.co/api/v2/move/340/"
+      },
+      {
+          "name": "volt-tackle",
+          "url": "https://pokeapi.co/api/v2/move/344/"
+      },
+      {
+          "name": "force-palm",
+          "url": "https://pokeapi.co/api/v2/move/395/"
+      },
+      {
+          "name": "thunder-fang",
+          "url": "https://pokeapi.co/api/v2/move/422/"
+      },
+      {
+          "name": "discharge",
+          "url": "https://pokeapi.co/api/v2/move/435/"
+      },
+      {
+          "name": "bolt-strike",
+          "url": "https://pokeapi.co/api/v2/move/550/"
+      },
+      {
+          "name": "freeze-shock",
+          "url": "https://pokeapi.co/api/v2/move/553/"
+      },
+      {
+          "name": "nuzzle",
+          "url": "https://pokeapi.co/api/v2/move/609/"
+      },
+      {
+          "name": "stoked-sparksurfer",
+          "url": "https://pokeapi.co/api/v2/move/700/"
+      },
+      {
+          "name": "splishy-splash",
+          "url": "https://pokeapi.co/api/v2/move/730/"
+      },
+      {
+          "name": "buzzy-buzz",
+          "url": "https://pokeapi.co/api/v2/move/734/"
+      }],
+      "name": "paralysis",
+      "names": [{
+          "language": {
+              "name": "fr",
+              "url": "https://pokeapi.co/api/v2/language/5/"
+          },
+          "name": "Paralysie"
+      },
+      {
+          "language": {
+              "name": "es",
+              "url": "https://pokeapi.co/api/v2/language/7/"
+          },
+          "name": "Parálisis"
+      },
+      {
+          "language": {
+              "name": "en",
+              "url": "https://pokeapi.co/api/v2/language/9/"
+          },
+          "name": "Paralysis"
+      }]
+  }]
+}

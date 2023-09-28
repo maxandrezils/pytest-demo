@@ -78,7 +78,7 @@ class TestPokemonMoves:
                 "Invalidmove",
                 "Not Found",
                 404,
-                id="Move that doesnt exist returns a 404",
+                id="Move that doesn't exist returns a 404",
             ),
         ],
     )

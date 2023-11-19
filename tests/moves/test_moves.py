@@ -7,7 +7,11 @@ from jsonschema import validate
 
 class TestPokemonMoves:
     def setup_method(self):
-        self.base_url = "https://pokeapi.co/api/v2/move/"
+        with open("./config.json") as f:
+            config = json.load(f)
+        self.url = config["BASE_URL"]
+        self.version = config["VERSION_2"]
+        self.base_url = f"{self.url}/{self.version}/move/"
         with open("./schemas/move_schema.json", "r") as f:
             self.json_schema = json.load(f)
 

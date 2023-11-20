@@ -2,10 +2,11 @@ import json
 import pytest
 import requests
 
+from config import json_import
+
 class TestPokemonAbilities:
     def setup_method(self):
-        with open("./config.json") as f:
-            config = json.load(f)
+        config = json_import.json_import("./config.json")
         self.url = config["BASE_URL"]
         self.version = config["VERSION"]
         self.base_url = f"{self.url}/{self.version}/ability/"
@@ -23,11 +24,7 @@ class TestPokemonAbilities:
         response = requests.get(f"{self.base_url}{id_or_name}")
         response.status_code == status_code
         self.validate_response(response.json(), ability_name, is_main_series, generation, effect)
-    
-    def test_validate_ability_response_with_schema(self):
-
         
-    
     def validate_response(self, data, ability_name, is_main_series, generation, effect):
         """Used to assert the values returned in the json response when performing a get request on the ability endpoint
 

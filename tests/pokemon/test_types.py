@@ -2,12 +2,12 @@ import json
 import pytest
 import requests
 
+from config import json_import
+
 
 class TestPokemonTypes:
     def setup_method(self):
-        with open("./config.json") as f:
-            config = json.load(f)
-
+        config = json_import.json_import("./config.json")
         self.url = config["BASE_URL"]
         self.version = config["VERSION"]
         self.base_url = f"{self.url}/{self.version}/type"

@@ -4,16 +4,17 @@ import requests
 import time
 from jsonschema import validate
 
+from config import json_import
+
 
 class TestPokemonMoves:
     def setup_method(self):
-        with open("./config.json") as f:
-            config = json.load(f)
+        config = json_import.json_import("./config.json")
         self.url = config["BASE_URL"]
         self.version = config["VERSION"]
         self.base_url = f"{self.url}/{self.version}/move/"
-        with open("./schemas/move_schema.json", "r") as f:
-            self.json_schema = json.load(f)
+        self.json_schema = json_import.json_import("./schemas/move_schema.json")
+
 
     @pytest.mark.parametrize(
         ("id_or_name", "move_name", "accuracy", "power", "pp", "type"),

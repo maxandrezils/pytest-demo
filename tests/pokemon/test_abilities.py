@@ -17,9 +17,27 @@ class TestPokemonAbilities:
         ]
     )
     def test_get_ability_by_id_or_name(self,status_code, id_or_name, ability_name, is_main_series, generation, effect):
+        """
+        Tests that the PokeAPI returns a valid response when a numeric or string ability id is used as a parameter.
+        """
         response = requests.get(f"{self.base_url}{id_or_name}")
         response.status_code == status_code
-        data = response.json()
+        self.validate_response(response.json(), ability_name, is_main_series, generation, effect)
+    
+    def test_validate_ability_response_with_schema(self):
+
+        
+    
+    def validate_response(self, data, ability_name, is_main_series, generation, effect):
+        """Used to assert the values returned in the json response when performing a get request on the ability endpoint
+
+        Args:
+            data (_type_): The response.json of the request
+            ability_name (_type_): The name of the ability
+            is_main_series (bool): Does the ability come from the anime or the game.
+            generation (_type_): Which generation did the ability first occur in.
+            effect (_type_): What is the effect of the ability.
+        """
         assert data["name"] == ability_name, "Incorrect ability name returned."
         assert data["is_main_series"] == is_main_series, "Incorrect status for is main series is returned."
         assert data["generation"]["name"] == generation, "Incorrect generation returned."

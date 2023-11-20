@@ -15,7 +15,6 @@ class TestPokemonMoves:
         self.base_url = f"{self.url}/{self.version}/move/"
         self.json_schema = json_import.json_import("./schemas/move_schema.json")
 
-
     @pytest.mark.parametrize(
         ("id_or_name", "move_name", "accuracy", "power", "pp", "type"),
         [

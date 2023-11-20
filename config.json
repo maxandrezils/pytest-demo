@@ -1,5 +1,4 @@
 {
   "BASE_URL": "https://pokeapi.co/api/",
-  "VERSION_1": "v1",
-  "VERSION_2": "v2"
+  "VERSION": "v2"
 }

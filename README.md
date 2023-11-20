@@ -1,6 +1,6 @@
 # pytest-demo
 
-Practice and Demo using pytest to test an API
+Practice and Demo of a Python based REST API automation suite using pytest.
 
 ## Installation Guide
 

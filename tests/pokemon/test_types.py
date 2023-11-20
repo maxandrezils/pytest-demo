@@ -9,7 +9,7 @@ class TestPokemonTypes:
             config = json.load(f)
 
         self.url = config["BASE_URL"]
-        self.version = config["VERSION_2"]
+        self.version = config["VERSION"]
         self.base_url = f"{self.url}/{self.version}/type"
 
     def test_get_pokemon_type_by_id(self):

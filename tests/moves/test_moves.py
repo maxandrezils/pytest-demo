@@ -10,7 +10,7 @@ class TestPokemonMoves:
         with open("./config.json") as f:
             config = json.load(f)
         self.url = config["BASE_URL"]
-        self.version = config["VERSION_2"]
+        self.version = config["VERSION"]
         self.base_url = f"{self.url}/{self.version}/move/"
         with open("./schemas/move_schema.json", "r") as f:
             self.json_schema = json.load(f)

@@ -5,6 +5,7 @@ description = "Pytest demo repo, used to showcase pytest experience"
 authors = ["Max-Andre Zils <zilsmc@gmail.com>"]
 license = "Apache License"
 readme = "README.md"
+package-mode = false
 
 [tool.poetry.dependencies]
 python = "^3.11"
